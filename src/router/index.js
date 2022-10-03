@@ -2,11 +2,13 @@ import { createRouter, createWebHistory } from "vue-router";
 import App from "../App.vue";
 import LogIn from "../views/LogIn.vue";
 import SignUp from "../views/SignUp.vue";
-import Home from "../views/Home.vue";
-import Account from "../views/Account.vue";
-import RegistrarSV from "../views/RegistrarSV.vue";
-import HistoriaClinica from "../views/HistoriaClinica.vue";
-import AccountEdit from "../views/AccountEdit.vue";
+// Paciente
+import HomePaciente from "../views/paciente/Home.vue";
+import AccountPaciente from "../views/paciente/Account.vue";
+import AccountEditPaciente from "../views/paciente/AccountEdit.vue";
+import RegistrarSVPaciente from "../views/paciente/RegistrarSV.vue";
+import HistoriaClinicaPaciente from "../views/paciente/HistoriaClinica.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,30 +28,37 @@ const router = createRouter({
       name: "signUp",
       component: SignUp,
     },
+    // Paciente
     {
-      path: "/user/home",
+      path: "/paciente/home",
+      name: "HomePaciente",
+      component: HomePaciente,
+    },
+    {
+      path: "/paciente/account",
+      name: "AccountPaciente",
+      component: AccountPaciente,
+    },
+    {
+      path: "/paciente/RegistrarSV",
+      name: "RegistrarSVPaciente",
+      component: RegistrarSVPaciente,
+    },
+    {
+      path: "/paciente/HistoriaClinica",
+      name: "HistoriaClinicaPaciente",
+      component: HistoriaClinicaPaciente,
+    },
+    {
+      path: "/paciente/AccountEdit",
+      name: "AccountEditPaciente",
+      component: AccountEditPaciente,
+    },
+    // Medico
+    {
+      path: "/medico/home",
       name: "home",
-      component: Home,
-    },
-    {
-      path: "/user/account",
-      name: "account",
-      component: Account,
-    },
-    {
-      path: "/user/RegistrarSV",
-      name: "RegistrarSV",
-      component: RegistrarSV,
-    },
-    {
-      path: "/user/HistoriaClinica",
-      name: "HistoriaClinica",
-      component: HistoriaClinica,
-    },
-    {
-      path: "/user/AccountEdit",
-      name: "AccountEdit",
-      component: AccountEdit,
+      component: HomeMedico,
     },
   ],
 });

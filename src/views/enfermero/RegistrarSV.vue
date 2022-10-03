@@ -14,17 +14,17 @@
         <div class="space-x-6">
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="home"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
+                to="HomePaciente"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="RegistrarSV"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
+                to="RegistrarSVPaciente"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
                 Vitales</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="Account"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
+                to="AccountPaciente"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="HistoriaClinica"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
+                to="HistoriaClinicaPaciente"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
             <button
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
                 v-on:click="logOut"><i class='bx bx-fw bx-log-out'></i>Cerrar Sesión </button>
@@ -33,57 +33,36 @@
     <main class="flex gap-4 mt-6">
         <!-- Tabla Ultimos registros -->
         <div class="overflow-x-auto relative shadow sm:rounded-lg w-3/4">
-            <h2 class="py-3 font-bold text-center bg-white border-b">Ultimos Registros</h2>
-            <table class="w-full text-sm mt-2 text-center">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-                    <tr>
-                        <th scope="col" class="py-3 px-6">
-                            Fecha
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Realizador Por:
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Acción
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-white border-b hover:bg-gray-50">
-                        <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
-                            02/10/2022
-                        </th>
-                        <td class="py-4 px-6">
-                            Paciente
-                        </td>
-                        <td class="py-4 px-6">
-                            <a href="#" class="font-medium text-helpmi-600 hover:underline">Ver Informe</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-50">
-                        <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
-                            30/09/2022
-                        </th>
-                        <td class="py-4 px-6">
-                            Paciente
-                        </td>
-                        <td class="py-4 px-6">
-                            <a href="#" class="font-medium text-helpmi-600 hover:underline">Ver Informe</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white hover:bg-gray-50">
-                        <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
-                            29/09/2022
-                        </th>
-                        <td class="py-4 px-6">
-                            Familiar
-                        </td>
-                        <td class="py-4 px-6">
-                            <a href="#" class="font-medium text-helpmi-600 hover:underline">Ver Informe</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2 class="py-3 font-bold text-center bg-white border-b">Registrar Signos Vitales</h2>
+            <form class="bg-white p-4">
+                <label for="oximetria" class="block mb-1 text-xs uppercase font-semibold">Oximetría</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="oximetria" type="number" placeholder="Oximatría">
+                <label for="frecuenciaRespiratoria" class="block mb-1 text-xs uppercase font-semibold">Frecuencia
+                    Respiratoria</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="frecuenciaRespiratoria" type="number" placeholder="Frecuencia Respiratoria">
+                <label for="frecuenciaCardiaca" class="block mb-1 text-xs uppercase font-semibold">Frecuencia
+                    Cardíaca</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="frecuenciaCardiaca" type="number" placeholder="Frecuencia Cardíaca">
+                <label for="temperatura" class="block mb-1 text-xs uppercase font-semibold">Temperatura</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="temperatura" type="number" placeholder="Temperatura">
+                <label for="presionArterial" class="block mb-1 text-xs uppercase font-semibold">Presión Arterial</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="presionArterial" type="number" placeholder="Presión Arterial">
+                <label for="glicemia" class="block mb-1 text-xs uppercase font-semibold">Glicemia</label>
+                <input
+                    class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-helpmi-500 focus:border-helpmi-500 block w-25 p-2"
+                    id="glicemia" type="number" placeholder="Glicemia">
+                <button class="bg-helpmi-500 py-2 px-4 rounded-full text-white mt-4 hover:bg-helpmi-600" type="submit">Registrar Signos Vitales</button>
+            </form>
         </div>
         <div class="shadow md:rounded-lg bg-white w-1/4">
             <h2 class="font-bold text-center py-3 border-b">Información Medica</h2>

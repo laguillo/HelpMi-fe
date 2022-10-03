@@ -14,17 +14,17 @@
         <div class="space-x-6">
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="home"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
+                to="HomePaciente"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="RegistrarSV"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
+                to="RegistrarSVPaciente"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
                 Vitales</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="Account"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
+                to="AccountPaciente"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="HistoriaClinica"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
+                to="HistoriaClinicaPaciente"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
             <button
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
                 v-on:click="logOut"><i class='bx bx-fw bx-log-out'></i>Cerrar Sesión </button>
