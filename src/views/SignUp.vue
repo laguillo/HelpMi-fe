@@ -41,7 +41,7 @@ export default {
     methods: {
         processSignUp: function () {
             axios.post(
-                "http://127.0.0.1:8000/user/",
+                "https://helpmi-be.herokuapp.com/user/",
                 this.user,
                 { headers: {} }
             )
