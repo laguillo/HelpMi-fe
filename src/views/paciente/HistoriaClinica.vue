@@ -112,11 +112,6 @@ export default {
             else
                 this.$router.push({ name: "HistoriaClinica" });
         },
-        logOut: function () {
-            localStorage.clear();
-            alert("Sesión Cerrada");
-            this.verifyAuth();
-        },
         getData: async function () {
             if (
                 localStorage.getItem("token_access") === null ||

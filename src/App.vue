@@ -3,9 +3,9 @@
     <img class="w-28" src="./assets/logo.svg" alt="">
     <nav class="ml-auto flex font-medium items-center space-x-4">
       <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
-      <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
-      <button class="" v-if="is_auth" v-on:click="loadHome"> Inicio </button>
-      <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="is_auth" v-on:click="loadAccount"><i class='bx bx-fw bx-user'></i>Cuenta</button>
+      <!-- <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button> -->
+      <!-- <button v-if="is_auth" v-on:click="loadHome"> Inicio </button> -->
+      <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="is_auth" v-on:click="loadHome"><i class='bx bx-fw bx-user'></i>Mi Cuenta</button>
     </nav>
   </header>
   <div>
@@ -34,7 +34,7 @@ export default {
       else
         this.$router.push({ name: "home" });
     },
-
+    
     loadAccount: function () {
       this.$router.push({ name: "home" });
     },
@@ -45,7 +45,7 @@ export default {
 
     logOut: function () {
       localStorage.clear();
-      alert("Sesión Cerrada");
+      // alert("Sesión Cerrada");
       this.verifyAuth();
     },
 
@@ -54,7 +54,7 @@ export default {
     },
 
     loadSignUp: function () {
-      this.$router.push({ name: "signUp" })
+      this.$router.push({ name: "registro" })
     },
 
     completedLogIn: function (data) {
@@ -67,7 +67,9 @@ export default {
 
     completedSignUp: function (data) {
       alert("Registro Exitoso");
-      this.completedLogIn(data);
+      const formregistro = document.getElementById("formRegistro")
+      formregistro.reset();
+      // this.completedLogIn(data);
     },
   },
   created: function () {

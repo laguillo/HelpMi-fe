@@ -8,7 +8,7 @@
                 </h1>
                 <p class="text-xs font-semibold">Documento: <span class="font-normal">{{tipoDocumento}}
                         {{documento}}</span></p>
-                <p class="text-xs font-semibold">Rol del usuario: <span class="font-normal">Paciente</span></p>
+                <p class="text-xs font-semibold">Rol del usuario: <span class="font-normal">Auxiliar</span></p>
             </div>
         </div>
         <div class="space-x-6">
@@ -17,14 +17,10 @@
                 to="home"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="RegistrarSV"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
-                Vitales</router-link>
+                to="registro"><i class='bx bx-fw bx-user-plus'></i>Registrar Nuevo Usuario</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="Account"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
-            <router-link
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="HistoriaClinica"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
+                to="account"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
             <button
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
                 v-on:click="logOut"><i class='bx bx-fw bx-log-out'></i>Cerrar Sesión </button>

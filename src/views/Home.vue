@@ -1,6 +1,9 @@
 <template>
-    <menuPaciente></menuPaciente>
-    <main class="flex gap-4 mt-6">
+    <menuPaciente v-if="rol === 'P'"></menuPaciente>
+    <menuAuxiliar v-if="rol === 'A'"></menuAuxiliar>
+    <menuMedico v-if="rol === 'M'"></menuMedico>
+    <!-- Paciente -->
+    <main v-if="rol === 'P'" class="flex gap-4 mt-6">
         <!-- Tabla Ultimos registros -->
         <div class="overflow-x-auto relative shadow sm:rounded-lg w-3/4">
             <h2 class="py-3 font-bold text-center bg-white border-b">Ultimos Registros</h2>
@@ -67,6 +70,8 @@
 
 <script>
 import menuPaciente from "@/components/paciente/menuComponent.vue";
+import menuAuxiliar from "@/components/auxiliar/menuComponent.vue";
+import menuMedico from "@/components/medico/menuComponent.vue";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 export default {
@@ -92,11 +97,6 @@ export default {
                 this.$router.push({ name: "logIn" });
             else
                 this.$router.push({ name: "home" });
-        },
-        logOut: function () {
-            localStorage.clear();
-            alert("Sesión Cerrada");
-            this.verifyAuth();
         },
         getData: async function () {
             if (localStorage.getItem("token_access") === null ||
@@ -141,6 +141,6 @@ export default {
     created: async function () {
         this.getData();
     },
-    components: { menuPaciente }
+    components: { menuPaciente, menuAuxiliar, menuMedico }
 };
 </script>

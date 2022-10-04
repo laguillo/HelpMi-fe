@@ -1,5 +1,7 @@
 <template>
-    <menu-paciente></menu-paciente>
+    <menuPaciente v-if="rol === 'P'"></menuPaciente>
+    <menuAuxiliar v-if="rol === 'A'"></menuAuxiliar>
+    <menuMedico v-if="rol === 'M'"></menuMedico>
     <main class="flex gap-4 mt-6">
         <div class="shadow sm:rounded-lg w-3/4 bg-white">
             <div class="flex justify-center items-center space-x-4 border-b">
@@ -33,7 +35,9 @@
 </template>
 
 <script>
-import menuPaciente from '@/components/paciente/menuComponent.vue';
+import menuPaciente from "@/components/paciente/menuComponent.vue";
+import menuAuxiliar from "@/components/auxiliar/menuComponent.vue";
+import menuMedico from "@/components/medico/menuComponent.vue";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 export default {
@@ -62,11 +66,6 @@ export default {
                 this.$router.push({ name: "logIn" });
             else
                 this.$router.push({ name: "Account" });
-        },
-        logOut: function () {
-            localStorage.clear();
-            alert("Sesión Cerrada");
-            this.verifyAuth();
         },
         getData: async function () {
             if (
@@ -120,6 +119,6 @@ export default {
     created: async function () {
         this.getData();
     },
-    components: { menuPaciente }
+    components: { menuPaciente, menuAuxiliar, menuMedico }
 };
 </script>

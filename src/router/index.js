@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import App from "../App.vue";
 import LogIn from "../views/LogIn.vue";
-import SignUp from "../views/SignUp.vue";
+import HomePaciente from "../views/Home.vue";
+import AccountPaciente from "../views/Account.vue";
+import AccountEditPaciente from "../views/AccountEdit.vue";
 // Paciente
-import HomePaciente from "../views/paciente/Home.vue";
-import AccountPaciente from "../views/paciente/Account.vue";
-import AccountEditPaciente from "../views/paciente/AccountEdit.vue";
 import RegistrarSVPaciente from "../views/paciente/RegistrarSV.vue";
 import HistoriaClinicaPaciente from "../views/paciente/HistoriaClinica.vue";
+// Auxiliar
+import Registro from "../views/auxiliar/registro.vue";
 
 
 const router = createRouter({
@@ -24,21 +25,21 @@ const router = createRouter({
       component: LogIn,
     },
     {
-      path: "/user/signUp",
-      name: "signUp",
-      component: SignUp,
-    },
-    // Paciente
-    {
-      path: "/paciente/home",
+      path: "/user/home",
       name: "home",
       component: HomePaciente,
     },
     {
-      path: "/paciente/account",
+      path: "/user/account",
       name: "account",
       component: AccountPaciente,
     },
+    {
+      path: "/user/AccountEdit",
+      name: "AccountEdit",
+      component: AccountEditPaciente,
+    },
+    // Paciente
     {
       path: "/paciente/RegistrarSV",
       name: "RegistrarSV",
@@ -49,11 +50,12 @@ const router = createRouter({
       name: "HistoriaClinica",
       component: HistoriaClinicaPaciente,
     },
+    // Auxiliar
     {
-      path: "/paciente/AccountEdit",
-      name: "AccountEdit",
-      component: AccountEditPaciente,
-    },
+      path: "/user/registro",
+      name: "registro",
+      component: Registro,
+    }
     // Medico
   ],
 });
