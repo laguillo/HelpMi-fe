@@ -50,7 +50,7 @@ import menuMedico from "@/components/medico/menuComponent.vue";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 export default {
-    name: "Home",
+    name: "ListaPacientes",
     data: function () {
         return {
             username: localStorage.getItem("username") || "none",

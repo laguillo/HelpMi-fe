@@ -19,6 +19,7 @@
                     <label for="rol" class="block text-xs uppercase font-semibold">Rol</label>
                     <select id="rol" v-model="user.rol"
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
+                        <option value="A">A</option>
                         <option value="E">E</option>
                         <option value="M">M</option>
                         <option value="P">P</option>
