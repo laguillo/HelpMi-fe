@@ -9,6 +9,9 @@ import RegistrarSVPaciente from "../views/paciente/RegistrarSV.vue";
 import HistoriaClinicaPaciente from "../views/paciente/HistoriaClinica.vue";
 // Auxiliar
 import Registro from "../views/auxiliar/registro.vue";
+// Medico
+import historiaClinicaMedico from "../views/medico/historiaClinica.vue"
+import listaPacientes from "../views/medico/listaPacientes.vue";
 
 
 const router = createRouter({
@@ -55,8 +58,18 @@ const router = createRouter({
       path: "/user/registro",
       name: "registro",
       component: Registro,
-    }
+    },
     // Medico
+    {
+      path: "/user/hc",
+      name: "hc",
+      component: historiaClinicaMedico,
+    },
+    {
+      path: "/user/listaPacientes",
+      name: "listaPacientes",
+      component: listaPacientes,
+    },
   ],
 });
 

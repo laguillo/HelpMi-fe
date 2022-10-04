@@ -17,10 +17,10 @@
                 to="home"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="registro"><i class='bx bx-fw bx-user'></i>Pacientes</router-link>
+                to="listaPacientes"><i class='bx bx-fw bx-user'></i>Pacientes</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="registro"><i class='bx bx-fw bx-clipboard'></i>Consultar Historia Clínica</router-link>
+                to="hc"><i class='bx bx-fw bx-clipboard'></i>Consultar Historia Clínica</router-link>
             <router-link
                 class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
                 to="account"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
