@@ -2,10 +2,10 @@
   <header class="py-4 flex items-center border-b">
     <img class="w-28" src="./assets/logo.svg" alt="">
     <nav class="ml-auto flex font-medium items-center space-x-4">
-      <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
+      <!-- <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button> -->
       <!-- <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button> -->
       <!-- <button v-if="is_auth" v-on:click="loadHome"> Inicio </button> -->
-      <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="is_auth" v-on:click="loadHome"><i class='bx bx-fw bx-user'></i>Mi Cuenta</button>
+      <!-- <button class="py-2 px-4 font-semibold bg-helpmi-500 text-gray-50 rounded-full hover:bg-helpmi-600" v-if="is_auth" v-on:click="loadHome"><i class='bx bx-fw bx-user'></i>Mi Cuenta</button> -->
     </nav>
   </header>
   <div>
