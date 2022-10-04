@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="shadow md:rounded-lg bg-white w-1/4">
+        <div v-if="rol === 'M'" class="shadow md:rounded-lg bg-white w-1/4">
             <h2 class="font-bold text-center py-3 border-b">Información Medica</h2>
             <div class="space-y-2 p-4 text-sm">
                 <p class="font-semibold">Médico: <span class="font-normal">{{medico}}</span></p>
