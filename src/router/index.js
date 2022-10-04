@@ -41,12 +41,12 @@ const router = createRouter({
     },
     // Paciente
     {
-      path: "/paciente/RegistrarSV",
+      path: "/user/RegistrarSV",
       name: "RegistrarSV",
       component: RegistrarSVPaciente,
     },
     {
-      path: "/paciente/HistoriaClinica",
+      path: "/user/HistoriaClinica",
       name: "HistoriaClinica",
       component: HistoriaClinicaPaciente,
     },
