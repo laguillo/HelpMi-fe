@@ -31,35 +31,30 @@ const router = createRouter({
     // Paciente
     {
       path: "/paciente/home",
-      name: "HomePaciente",
+      name: "home",
       component: HomePaciente,
     },
     {
       path: "/paciente/account",
-      name: "AccountPaciente",
+      name: "account",
       component: AccountPaciente,
     },
     {
       path: "/paciente/RegistrarSV",
-      name: "RegistrarSVPaciente",
+      name: "RegistrarSV",
       component: RegistrarSVPaciente,
     },
     {
       path: "/paciente/HistoriaClinica",
-      name: "HistoriaClinicaPaciente",
+      name: "HistoriaClinica",
       component: HistoriaClinicaPaciente,
     },
     {
       path: "/paciente/AccountEdit",
-      name: "AccountEditPaciente",
+      name: "AccountEdit",
       component: AccountEditPaciente,
     },
     // Medico
-    {
-      path: "/medico/home",
-      name: "home",
-      component: HomeMedico,
-    },
   ],
 });
 

@@ -71,7 +71,7 @@ export default {
     },
   },
   created: function () {
-    this.verifyAuth(),
+    this.verifyAuth()
   }
 }
 </script>

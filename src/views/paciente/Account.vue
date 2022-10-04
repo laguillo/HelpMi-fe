@@ -1,35 +1,5 @@
 <template>
-    <nav class="flex justify-between text-xs lg:text-sm items-center mt-6 rounded-3xl bg-white p-4 shadow-sm">
-        <div class="flex justify-center items-center space-x-3">
-            <div class="text-6xl text-gray-500 rounded-full border p-4"><i class='bx bx-user'></i></div>
-            <div class="grid">
-                <h1 class="font-semibold">
-                    ¡Bienvenido(a) <span> {{ nombre }} {{ apellido }} </span>!
-                </h1>
-                <p class="text-xs font-semibold">Documento: <span class="font-normal">{{tipoDocumento}}
-                        {{documento}}</span></p>
-                <p class="text-xs font-semibold">Rol del usuario: <span class="font-normal">{{rol}}</span></p>
-            </div>
-        </div>
-        <div class="space-x-6">
-            <router-link
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="HomePaciente"><i class='bx bx-fw bx-home'></i>Inicio</router-link>
-            <router-link
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="RegistrarSVPaciente"><i class="bx bx-fw bx-plus-medical"></i>Registrar Signos
-                Vitales</router-link>
-            <router-link
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="AccountPaciente"><i class='bx bx-fw bxs-user-rectangle'></i>Mi Perfil</router-link>
-            <router-link
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                to="HistoriaClinicaPaciente"><i class="bx bx-fw bx-clipboard"></i>Historia Clinica</router-link>
-            <button
-                class="font-semibold no-underline decoration-2 hover:underline hover:decoration-helpmi-400 active:decoration-helpmi-500"
-                v-on:click="logOut"><i class='bx bx-fw bx-log-out'></i>Cerrar Sesión </button>
-        </div>
-    </nav>
+    <menu-paciente></menu-paciente>
     <main class="flex gap-4 mt-6">
         <div class="shadow sm:rounded-lg w-3/4 bg-white">
             <div class="flex justify-center items-center space-x-4 border-b">
@@ -63,6 +33,7 @@
 </template>
 
 <script>
+import menuPaciente from '@/components/paciente/menuComponent.vue';
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 export default {
@@ -125,7 +96,6 @@ export default {
                     this.rol = result.data.rol;
                     this.medico = result.data.medico;
                     this.enfermero = result.data.enfermero;
-                    // this.balance = result.data.account.balance;
                     this.loaded = true;
                 })
                 .catch(() => {
@@ -150,5 +120,6 @@ export default {
     created: async function () {
         this.getData();
     },
+    components: { menuPaciente }
 };
 </script>
