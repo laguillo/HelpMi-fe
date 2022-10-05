@@ -20,7 +20,7 @@
                                 class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-helpmi-600 focus:border-helpmi-600 block w-full p-2.5"
                                 required="" />
                         </div>
-                        <div class="flex items-center justify-between">
+                        <!-- <div class="flex items-center justify-between">
                             <div class="flex items-start">
                                 <div class="flex items-center h-5">
                                     <input id="remember" type="checkbox"
@@ -32,16 +32,16 @@
                             </div>
                             <a href="#" class="text-sm font-medium text-helpmi-600 hover:underline">Olvide mi
                                 contraseña</a>
-                        </div>
+                        </div> -->
                         <button type="submit"
                             class="w-full text-white bg-helpmi-600 hover:bg-helpmi-700 focus:ring-4 focus:outline-none focus:ring-helpmi-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                             Entrar
                         </button>
     
-                        <p class="text-sm font-light text-gray-500">
+                        <!-- <p class="text-sm font-light text-gray-500">
                             Aún no tienes cuenta?
                             <a href="#" class="font-medium text-helpmi-600 hover:underline">Solicitar Registro</a>
-                        </p>
+                        </p> -->
                     </form>
                 </div>
             </div>
