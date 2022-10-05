@@ -74,7 +74,7 @@ export default {
             let token = localStorage.getItem("token_access");
             let userId = jwt_decode(token).user_id.toString();
 
-            axios.get(`http://helpmi-fe.herokuapp.com/user/${userId}/`, { headers: { 'Authorization': `Bearer ${token}` } })
+            axios.get(`https://helpmi-be.herokuapp.com/user/${userId}/`, { headers: { 'Authorization': `Bearer ${token}` } })
                 .then((result) => {
                     this.nombre = result.data.nombre;
                     this.apellido = result.data.apellido;
@@ -91,7 +91,7 @@ export default {
                 });
         },
         verifyToken: function () {
-            return axios.post("http://helpmi-fe.herokuapp.com/refresh/", { refresh: localStorage.getItem("token_refresh") }, { headers: {} }
+            return axios.post("https://helpmi-be.herokuapp.com/refresh/", { refresh: localStorage.getItem("token_refresh") }, { headers: {} }
             )
                 .then((result) => {
                     localStorage.setItem("token_access", result.data.access);
