@@ -28,15 +28,64 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="user in result" :key="index" class="bg-white border-b hover:bg-gray-50">
+                    <tr class="bg-white border-b hover:bg-gray-50">
                         <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
-                            {{user.nombre}} {{user.apellido}}
+                            Daniel Lopez
                         </th>
                         <td class="py-4 px-6">
-                            Paciente
+                            CC 0183911061
                         </td>
                         <td class="py-4 px-6">
-                            <a href="#" class="font-medium text-helpmi-600 hover:underline">Ver Informe</a>
+                            3103126041
+                        </td>
+                        <td>
+                            Calle 10 # 9-31
+                        </td>
+                        <td>
+                            Masculino
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                        <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+                            Rosa Lopez
+                        </th>
+                        <td class="py-4 px-6">
+                            CC 1083655048
+                        </td>
+                        <td class="py-4 px-6">
+                            3103126042
+                        </td>
+                        <td>
+                            Calle 12 n 8-36
+                        </td>
+                        <td>
+                            Femenino
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                        <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+                            Juan David Lago
+                        </th>
+                        <td class="py-4 px-6">
+                            CC 1046237872
+                        </td>
+                        <td class="py-4 px-6">
+                            3167237272
+                        </td>
+                        <td>
+                            Calle 74a # 70-70
+                        </td>
+                        <td>
+                            Masculino
+                        </td>
+                        <td>
+                            
                         </td>
                     </tr>
                 </tbody>
