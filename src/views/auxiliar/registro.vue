@@ -19,11 +19,11 @@
                     <label for="rol" class="block text-xs uppercase font-semibold">Rol</label>
                     <select id="rol" v-model="user.rol"
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
-                        <option value="A">A</option>
-                        <option value="E">E</option>
-                        <option value="M">M</option>
-                        <option value="P">P</option>
-                        <option value="F">F</option>
+                        <option value="A">Auxiliar</option>
+                        <option value="E">Enfermero</option>
+                        <option value="M">Medico</option>
+                        <option value="P">Paciente</option>
+                        <option value="F">Familiar Paciente</option>
                     </select>
 
                     <label for="nombre" class="block text-xs uppercase font-semibold">Nombre</label>
@@ -41,9 +41,9 @@
                     <label for="tipoDocumento" class="block text-xs uppercase font-semibold">Tipo de documento</label>
                     <select id="tipoDocumento" v-model="user.tipoDocumento"
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
-                        <option value="CC">CC</option>
-                        <option value="RC">RC</option>
-                        <option value="TI">TI</option>
+                        <option value="CC">Cedula de Ciudadania</option>
+                        <option value="RC">Registro Civil</option>
+                        <option value="TI">Tarjeta de Identidad</option>
                     </select>
 
                     <label for="documento" class="block text-xs uppercase font-semibold">Número</label>
@@ -64,8 +64,8 @@
                     <label for="genero" class="block text-xs uppercase font-semibold">Genero</label>
                     <select id="genero" v-model="user.genero"
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
-                        <option value="M">M</option>
-                        <option value="F">F</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
                     </select>
                 </div>
             </div>
