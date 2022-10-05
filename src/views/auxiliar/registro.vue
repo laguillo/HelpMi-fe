@@ -9,15 +9,15 @@
                     <label for="username" class="block text-xs uppercase font-semibold">Usuario</label>
                     <input type="text" id="username"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.username" placeholder="Username">
+                        v-model="user.username" placeholder="Username" required>
 
                     <label for="password" class="block text-xs uppercase font-semibold">Contraseña</label>
                     <input type="password" id="password"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.password" placeholder="••••••••">
+                        v-model="user.password" placeholder="••••••••" required>
 
                     <label for="rol" class="block text-xs uppercase font-semibold">Rol</label>
-                    <select id="rol" v-model="user.rol"
+                    <select id="rol" v-model="user.rol" required
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
                         <option value="A">Auxiliar</option>
                         <option value="E">Enfermero</option>
@@ -29,17 +29,17 @@
                     <label for="nombre" class="block text-xs uppercase font-semibold">Nombre</label>
                     <input type="text" id="nombre"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.nombre" placeholder="Nombre">
+                        v-model="user.nombre" placeholder="Nombre" required>
 
                     <label for="apellido" class="block text-xs uppercase font-semibold">Apellido</label>
                     <input type="text" id="apellido"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.apellido" placeholder="Apellido">
+                        v-model="user.apellido" placeholder="Apellido" required>
                 </div>
 
                 <div>
                     <label for="tipoDocumento" class="block text-xs uppercase font-semibold">Tipo de documento</label>
-                    <select id="tipoDocumento" v-model="user.tipoDocumento"
+                    <select id="tipoDocumento" v-model="user.tipoDocumento" required
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
                         <option value="CC">Cedula de Ciudadania</option>
                         <option value="RC">Registro Civil</option>
@@ -49,20 +49,20 @@
                     <label for="documento" class="block text-xs uppercase font-semibold">Número</label>
                     <input type="text" id="documento"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.documento" placeholder="Número de documento">
+                        v-model="user.documento" placeholder="Número de documento" required>
 
                     <label for="email" class="block text-xs uppercase font-semibold">Correo Electronico</label>
                     <input type="text" id="email"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.email" placeholder="correo@mail.com">
+                        v-model="user.email" placeholder="correo@mail.com" required>
 
                     <label for="celular" class="block text-xs uppercase font-semibold">Celular</label>
                     <input type="text" id="celular"
                         class="mb-2 bg-gray-50 border border-gray-300 rounded focus:ring-helpmi-500 focus:border-helpmi-500 block p-1.5"
-                        v-model="user.celular" placeholder="Número de Celular">
+                        v-model="user.celular" placeholder="Número de Celular" required>
 
                     <label for="genero" class="block text-xs uppercase font-semibold">Genero</label>
-                    <select id="genero" v-model="user.genero"
+                    <select id="genero" v-model="user.genero" required
                         class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-helpmi-500 focus:border-helpmi-500 block w-full p-1.5">
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>
