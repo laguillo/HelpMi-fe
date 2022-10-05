@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="rol === 'M'" class="shadow md:rounded-lg bg-white w-1/4">
+        <div v-if="rol === 'P'" class="shadow md:rounded-lg bg-white w-1/4">
             <h2 class="font-bold text-center py-3 border-b">Información Medica</h2>
             <div class="space-y-2 p-4 text-sm">
                 <p class="font-semibold">Médico: <span class="font-normal">{{medico}}</span></p>
@@ -80,7 +80,7 @@ export default {
             let userId = jwt_decode(token).user_id.toString();
 
             axios
-                .get(`https://helpmi-be.herokuapp.com/user/${userId}/`, {
+                .get(`http://helpmi-fe.herokuapp.com/user/${userId}/`, {
                     headers: { Authorization: `Bearer ${token}` },
                 })
                 .then((result) => {
@@ -104,7 +104,7 @@ export default {
         verifyToken: function () {
             return axios
                 .post(
-                    "https://helpmi-be.herokuapp.com/refresh/",
+                    "http://helpmi-fe.herokuapp.com/refresh/",
                     { refresh: localStorage.getItem("token_refresh") },
                     { headers: {} }
                 )

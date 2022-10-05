@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="user in users" :key="index" class="bg-white border-b hover:bg-gray-50">
+                    <tr v-for="user in result" :key="index" class="bg-white border-b hover:bg-gray-50">
                         <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
                             {{user.nombre}} {{user.apellido}}
                         </th>
@@ -59,63 +59,47 @@ export default {
             documento: "",
             tipoDocumento: "",
             genero: "",
-            rol: "",
             direccion: "",
             celular: "",
-            medico: "",
-            enfermero: "",
             loaded: false,
         };
     },
     methods: {
-        verifyAuth: function () {
-            this.is_auth = localStorage.getItem("isAuth") || false;
-            if (this.is_auth == false)
-                this.$router.push({ name: "logIn" });
-            else
-                this.$router.push({ name: "home" });
-        },
         getData: async function () {
-            if (localStorage.getItem("token_access") === null ||
-                localStorage.getItem("token_refresh") === null) {
-                this.$emit("logOut");
+            if (localStorage.getItem("token_access") === null || localStorage.getItem("token_refresh") === null) {
+                this.$emit('logOut');
                 return;
             }
             await this.verifyToken();
             let token = localStorage.getItem("token_access");
             let userId = jwt_decode(token).user_id.toString();
-            axios
-                .get(`https://helpmi-be.herokuapp.com/user/${userId}/`, {
-                    headers: { Authorization: `Bearer ${token}` },
-                })
+
+            axios.get(`http://helpmi-fe.herokuapp.com/user/${userId}/`, { headers: { 'Authorization': `Bearer ${token}` } })
                 .then((result) => {
                     this.nombre = result.data.nombre;
                     this.apellido = result.data.apellido;
                     this.documento = result.data.documento;
                     this.tipoDocumento = result.data.tipoDocumento;
                     this.genero = result.data.genero;
-                    this.rol = result.data.rol;
                     this.direccion = result.data.direccion;
                     this.celular = result.data.celular;
-                    this.medico = result.data.medico;
-                    this.enfermero = result.data.enfermero;
-                    // this.balance = result.data.account.balance;
+                    console.log(result.data);
                     this.loaded = true;
                 })
                 .catch(() => {
-                    this.$emit("logOut");
+                    this.$emit('logOut');
                 });
         },
         verifyToken: function () {
-            return axios
-                .post("https://helpmi-be.herokuapp.com/refresh/", { refresh: localStorage.getItem("token_refresh") }, { headers: {} })
+            return axios.post("http://helpmi-fe.herokuapp.com/refresh/", { refresh: localStorage.getItem("token_refresh") }, { headers: {} }
+            )
                 .then((result) => {
                     localStorage.setItem("token_access", result.data.access);
                 })
                 .catch(() => {
-                    this.$emit("logOut");
+                    this.$emit('logOut');
                 });
-        },
+        }
     },
     created: async function () {
         this.getData();

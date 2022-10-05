@@ -58,7 +58,7 @@ export default {
         },
         logOut: function () {
             localStorage.clear();
-            alert("Sesión Cerrada");
+            // alert("Sesión Cerrada");
             this.verifyAuth();
         },
         getData: async function () {
@@ -74,7 +74,7 @@ export default {
             let userId = jwt_decode(token).user_id.toString();
 
             axios
-                .get(`https://helpmi-be.herokuapp.com/user/${userId}/`, {
+                .get(`http://helpmi-fe.herokuapp.com/user/${userId}/`, {
                     headers: { Authorization: `Bearer ${token}` },
                 })
                 .then((result) => {
@@ -92,7 +92,7 @@ export default {
         verifyToken: function () {
             return axios
                 .post(
-                    "https://helpmi-be.herokuapp.com/refresh/",
+                    "http://helpmi-fe.herokuapp.com/refresh/",
                     { refresh: localStorage.getItem("token_refresh") },
                     { headers: {} }
                 )
